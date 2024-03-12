@@ -1,3 +1,3 @@
-# A magical mix of the best - a transformer decoder model trained on fantasy & sci-fi text.
+# SEAMEN - A Voyage into the Depths of Discord
 
 hi world
