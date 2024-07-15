@@ -68,7 +68,7 @@ class Head(nn.Module):
     attn = attn @ value
     return attn
   
-  class multiHead(nn.Module):
+class multiHead(nn.Module):
   def __init__(self, n_heads, head_size):
     super().__init__()
     self.heads = nn.ModuleList([Head(head_size) for _ in range(n_heads)])
@@ -78,7 +78,7 @@ class Head(nn.Module):
     out = self.projection(stackedheads)
     return out
   
-  class Block(nn.Module):
+class Block(nn.Module):
   def __init__(self, n_embedding, n_heads):
     super().__init__()
     head_size = n_embedding // n_heads
@@ -97,7 +97,7 @@ class Head(nn.Module):
     x = x + self.network(x) # adds residual connection
     return x
   
-  class decoderTransformer(nn.Module):
+class decoderTransformer(nn.Module):
   def __init__(self):
     super().__init__()
     self.token_embedding = nn.Embedding(vocab_size, n_embedding)
